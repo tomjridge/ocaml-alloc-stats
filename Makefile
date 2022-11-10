@@ -13,8 +13,7 @@ run_alloc_many_large:
 	$(MAKE) alloc_many_large.ctf.dump
 
 %.ctf.dump: %.ctf
-	/tmp/dump.exe ctf $< > $@
+	bin/dump.exe ctf $< > $@
 
-
-/tmp/dump.exe:
-	cp /tmp/l/github/ocaml-gc-events-tracing/_build/default/bin/dump.exe /tmp
+# /tmp/dump.exe:
+# 	cp bin/dump.exe /tmp
