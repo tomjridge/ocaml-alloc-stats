@@ -1,2 +1,4 @@
 /.ipynb_checkpoints/
 /tmp.ctf.dump
+/benchmarks-menhir/menhir.ctf
+/benchmarks-binarytrees/binarytrees5.ctf
