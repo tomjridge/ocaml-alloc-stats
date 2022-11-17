@@ -1,8 +1,8 @@
 (* dump a trace; handles ctf, and raw formats *)
 
 let _ = 
-  if Array.length Sys.argv <> 3 then (
-    Printf.printf "Usage: %s version infile" (Sys.argv.(0));
+  if Array.length Sys.argv <> 4 then (
+    Printf.printf "Usage: %s [ctf|raw|lookahead] infile outfile" (Sys.argv.(0));
     Stdlib.exit (-1))
   else
     ()
@@ -13,7 +13,7 @@ let version = Sys.argv.(1) |> function
   | "lookahead" -> `Lookahead
   | x -> failwith (Printf.sprintf "Unrecognized version %s" x)
 
-let infile = Sys.argv.(2)
+let infile,outfile = Sys.(argv.(2),argv.(3))
 
 module Ctf_callbacks = struct
   let alloc_cb ~obj_id ~length = 

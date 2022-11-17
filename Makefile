@@ -30,3 +30,4 @@ dump.exe:
 clean:
 	dune clean
 	rm -f ./translate_with_promote_lookahead.exe ./dump.exe tmp.ctf.dump
+	rm -f dump_trace.exe tmp.csv tmp.dump tmp.translated

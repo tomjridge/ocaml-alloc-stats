@@ -1,0 +1,3 @@
+(executable
+ (name dump_trace)
+ (libraries memtrace))
