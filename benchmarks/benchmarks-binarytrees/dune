@@ -1,0 +1,10 @@
+;; disable a couple of warnings
+(env
+  (_ 
+    (flags (:standard -w -39-35))))
+
+(executable 
+ (name binarytrees5)
+ (modules binarytrees5)
+ (libraries memtrace))
+  

@@ -1,4 +1,0 @@
-(executable
- (name alloc_many_large)
- (modules alloc_many_large)
- (libraries memtrace))

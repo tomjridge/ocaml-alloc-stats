@@ -1,10 +1,16 @@
 # to run jupyter notebook interactively: `jupyter notebook`
 
-default: translate_with_promote_lookahead.exe
+default: exes
+
+exes: translate_with_promote_lookahead.exe dump.exe
 
 translate_with_promote_lookahead.exe:
-	dune build memtrace-utils/translate_with_promote_lookahead.exe
-	cp _build/default/memtrace-utils/translate_with_promote_lookahead.exe .
+	dune build memtrace-utils/$@
+	cp _build/default/memtrace-utils/$@ .
+
+dump.exe:
+	dune build memtrace-utils/$@
+	cp _build/default/memtrace-utils/$@ .
 
 
 # alloc_many_large.exe: 
@@ -23,4 +29,4 @@ translate_with_promote_lookahead.exe:
 
 clean:
 	dune clean
-	rm -f ./translate_with_promote_lookahead.exe
+	rm -f ./translate_with_promote_lookahead.exe ./dump.exe tmp.ctf.dump
