@@ -48,6 +48,7 @@ let dump filename outfile =
     Printf.fprintf outch "%010d P\n" (id :> int)
   | Collect id ->
     Printf.fprintf outch "%010d C\n" (id :> int));
+  Stdlib.close_out outch;
   Reader.close trace
 
 
