@@ -12,3 +12,5 @@ dump_trace.exe: FORCE
 clean:
 	dune clean
 	rm -f dump_trace.exe
+
+FORCE:
