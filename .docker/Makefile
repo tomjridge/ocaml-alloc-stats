@@ -10,7 +10,7 @@ SHELL:=bash
 DOCKER_IMAGE:=ocaml-alloc-stats/ocaml-dune-memtrace
 
 all:
-	echo "Select a particular target: `make docker-image` to first build the docker image with a clean ocaml environment; then `make run-docker` to check that the executable builds in a that environment."
+	@echo "Select a particular target: make docker-image to first build the docker image with a clean ocaml environment; then make run-docker to check that the executable builds in a that environment."
 
 docker-image:
 	docker build -t $(DOCKER_IMAGE) .
