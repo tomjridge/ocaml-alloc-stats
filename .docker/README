@@ -1,0 +1,3 @@
+The Makefile contains some commands that check that the dump_trace.exe binary can be built
+in a clean environment. See the Makefile for instructions.
+
